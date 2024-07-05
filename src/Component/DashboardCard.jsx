@@ -34,7 +34,7 @@ const DashboardCard = () => {
         {CardDetails.map((cards, index) => (
           <div
             key={index}
-            className="bg-white lg:w-[20rem] h-[10rem] sm:p-2 rounded-md max-sm:mb-3 max-sm:shadow-lg lg:shadow-md max-sm:p-3 lg:p-4"
+            className="bg-white lg:w-[20rem] h-[10rem] sm:p-2 rounded-md max-sm:mb-3 sm:shadow-lg max-sm:shadow-lg lg:shadow-md max-sm:p-3 lg:p-4"
           >
             <div className="flex justify-between max-sm:w-[18rem]">
               <div>
