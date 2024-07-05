@@ -1,6 +1,6 @@
-// import {BrowerRouter as Router, Route, Routes} from 'react-router-dom';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Dashboard from '../DashBoard/Dashboard';
+import User from "../DashBoard/User";
 import Dashboardpage from "../Component/Dashboardpage";
 import Home from "../DashBoard/Home";
 
@@ -11,6 +11,7 @@ const AppRouter = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboardpage />} />
+          <Route path="/users" element={<User />} />
 
           {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>

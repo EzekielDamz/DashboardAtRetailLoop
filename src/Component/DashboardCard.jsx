@@ -29,7 +29,7 @@ const DashboardCard = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full font-Ubuntu">
       <div className="flex lg:gap-[2.3rem] sm:pr-3 sm:gap-4 max-sm:gap-4 pt-[3.4rem] max-sm:overflow-x-auto scrollbar-hide max-sm:whitespace-nowrap">
         {CardDetails.map((cards, index) => (
           <div
@@ -49,13 +49,10 @@ const DashboardCard = () => {
                   <img
                     src={cards.smallIcon}
                     alt="progress icon"
-                  
                     className="pt-2 lg:w-[2rem] sm:w-[1rem] max-sm:w-[1rem]"
                   />
                 </div>
               </div>
-
-              {/* <i className={`${cards.bigIcon} text-[#3c3737] text-2xl`}></i> */}
             </div>
             <img
               src={cards.bigIcon}
@@ -63,7 +60,7 @@ const DashboardCard = () => {
               width={220}
               className="pt-3 font-[1rem]"
             />
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-2 font-Ubuntu">
               <div>
                 <p className="text-[#3c3737] text-sm">{cards.dataStarted}</p>
               </div>

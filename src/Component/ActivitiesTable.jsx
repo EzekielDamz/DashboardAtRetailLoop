@@ -4,13 +4,23 @@ const ActivitiesTable = ({ Activieties }) => {
   return (
     <div className="pb-5">
       {Activieties.map((details, index) => (
-        <div key={index} className={`p-4  flex justify-between ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}>
+        <div
+          key={index}
+          className={`p-4  flex justify-between font-Ubuntu ${
+            index % 2 === 0 ? "bg-gray-50" : "bg-white"
+          }`}
+        >
           <p className="lg:hidden sm:hidden max-sm:block">
             {typeof details.name === "string"
               ? details.name.substring(0, 5) + "..."
               : details.name}
           </p>
-          <p className="lg:block sm:block max-sm:hidden">{details.name}</p>
+          <p className="lg:hidden sm:block max-sm:hidden">
+            {typeof details.name === "string"
+              ? details.name.substring(0, 15) + "..."
+              : details.name}
+          </p>
+          <p className="lg:block sm:hidden max-sm:hidden">{details.name}</p>
           <div className="flex justify-between w-[30rem] lg:pl-5 max-sm:pl-10 sm:pl-5 lg:pr-7 max-sm:pr-3">
             <h3 className="">{details.status}</h3>
 
