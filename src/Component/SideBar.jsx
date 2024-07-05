@@ -18,7 +18,7 @@ const SideBar = () => {
     },
     {
       Nav: "Support center",
-      to: "/support-center",
+      to: "/support",
     },
   ];
   return (
