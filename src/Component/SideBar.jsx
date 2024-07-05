@@ -1,15 +1,16 @@
 // import React from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 import { IoMdFingerPrint } from "react-icons/io";
 const SideBar = () => {
+  const location = useLocation();
   const navbar = [
     {
       Nav: "Home",
-      to: "/home",
+      to: "/",
     },
     {
       Nav: "Dashboard",
-      to: "/",
+      to: "/dashboard",
     },
     {
       Nav: "Users",
@@ -21,20 +22,28 @@ const SideBar = () => {
     },
   ];
   return (
-    <aside className="bg-white pl-[2rem] h-screen  border-r w-[23%] sticky top-0 ">
+    <aside >
       <div className="pt-[3rem]">
         <div className="text-[2.5rem] pl-3 pb-7">
           <IoMdFingerPrint />
         </div>
         {navbar.map((navs, index) => (
           <div key={index} className=" py-2 cursor-pointer">
-            <h4 className="text-[#3c3737] pl-4 py-3 font-normal w-[12rem] rounded-sm hover:bg-[#3c3737] hover:text-[#ececec]">
-              {navs.Nav}
-            </h4>
+            <Link to={navs.to}>
+              <h4
+                className={`text-[#3c3737] lg:pl-2 max-sm:pl-2 py-3 font-normal w-[100%] rounded-sm sm:text-sm  lg:text-lg ${
+                  location.pathname.endsWith(`${navs.to}`)
+                    ? "bg-[#3c3737]  text-[#ececec] "
+                    : ""
+                }`}
+              >
+                {navs.Nav}
+              </h4>
+            </Link>
           </div>
         ))}
       </div>
-      <div className="pt-[12rem]">
+      <div className="pt-[12rem] text-[#3c3737] ">
         <p>Abram Kongaard</p>
       </div>
     </aside>

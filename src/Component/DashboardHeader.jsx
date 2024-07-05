@@ -2,7 +2,7 @@ import { HiPlusCircle } from "react-icons/hi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 const DashboardHeader = () => {
   return (
-    <div className="flex justify-between pt-[3rem] pr-10">
+    <div className="flex justify-between pt-[3rem] lg:pr-10 max-sm:pr-2 sm:pr-3">
       <div>
         <h3 className="text-2xl text-[#3c3737] font-medium">Dashboard</h3>
       </div>
